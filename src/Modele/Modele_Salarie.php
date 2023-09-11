@@ -21,6 +21,7 @@ SET password = :parammotDePasseHache,
 
     static function Salarie_Modifier_motDePasse($idSalarie, $motDePasseClair)
     {
+
         $connexionPDO = Singleton_ConnexionPDO::getInstance();
         $parammotDePasseHache = password_hash($motDePasseClair, PASSWORD_DEFAULT);
 
