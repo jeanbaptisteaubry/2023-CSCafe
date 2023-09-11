@@ -9,6 +9,7 @@ class Modele_Utilisateur
     /**
      * @param $connexionPDO : connexion à la base de données
      * @return mixed : le tableau des étudiants ou null (something went wrong...)
+     *
      */
     static function Utilisateur_Select()
     {
