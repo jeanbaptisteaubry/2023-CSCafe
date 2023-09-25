@@ -5,6 +5,11 @@ usecase (gérer catalogue) as UC_Gerer_Catalogue
 usecase (gérer entreprise cliente) as UC_Gerer_Entreprise
 usecase (gérer commande) as UC_Gerer_Commande
 
+usecase (Modifier  mon mot de passe) as UC_MDP
+usecase (gérer produit) as UC_G_Produit
+usecase (gérer catégorie produit) as UC_G_Cat_Produit
+
+
 
 actor :administrateur du logiciel: as admin
 actor :utilisateur Cafe: as userCafe
@@ -17,8 +22,14 @@ admin --> UC_Gerer_Catalogue
 admin --> UC_Gerer_Entreprise
 admin --> UC_Gerer_Commande
 
+
 userCafe --> UC_Gerer_Compte
 userCafe --> UC_Gerer_Catalogue
 userCafe --> UC_Gerer_Entreprise
 userCafe --> UC_Gerer_Commande
+
+UC_Gerer_Compte --> UC_MDP
+UC_Gerer_Catalogue --> UC_G_Produit
+UC_Gerer_Catalogue --> UC_G_Cat_Produit
+
 @enduml
