@@ -14,6 +14,6 @@ DUMP_FILE="C:/Users/jba/PhpstormProjects/2023-CSCafe/sql/$DB_NAME.sql"
 "$MYSQLDUMP" -u $DB_USER $DB_NAME > "C:/Users/jba/PhpstormProjects/2023-CSCafe/sql/backup_$(date +%Y%m%d%H%M%S).sql"
 
 # Restaurez la base de données à partir du dump
-"$MYSQL" -u $DB_USER -p$DB_PASSWORD $DB_NAME < $DUMP_FILE
+"$MYSQL" -u $DB_USER $DB_NAME < $DUMP_FILE
 
 exit 0
