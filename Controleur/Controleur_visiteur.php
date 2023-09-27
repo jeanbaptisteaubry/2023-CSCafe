@@ -52,6 +52,7 @@ switch ($action) {
                             case 2:
                                 $_SESSION["typeConnexionBack"] = "utilisateurCafe";
                                 $typeConnexion= "utilisateurCafe";
+                                //Ici, il faut déterminer si l'utilisateur est au claire avec la RGPD et obtenir son consentement
                                 $Vue->setMenu(new Vue_Menu_Administration($typeConnexion));
                                 break;
                             case 3:
